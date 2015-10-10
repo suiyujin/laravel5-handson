@@ -9,5 +9,13 @@
 <h1>アプリケーションのページ</h1>
 <img src="{{ asset('images/laravel.png') }}">
 
+<h2>Todoリスト</h2>
+
+<ul>
+@foreach ($todos as $todo)
+<li>{{ $todo->title }} : {{ $todo->status }}</li>
+@endforeach
+</ul>
+
 </body>
 </html>

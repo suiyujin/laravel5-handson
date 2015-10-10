@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use App\Http\Requests;
 use App\Http\Controllers\Controller;
+use App\Todo;
 
 class AppController extends Controller
 {
@@ -15,6 +16,8 @@ class AppController extends Controller
 
     public function getApp()
     {
-        return view('app');
+        $todos = Todo::all();
+        //return view('app', ['todos' => $todos]);
+        return view('app', compact('todos'));
     }
 }

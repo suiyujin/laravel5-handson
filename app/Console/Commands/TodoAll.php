@@ -3,6 +3,7 @@
 namespace App\Console\Commands;
 
 use Illuminate\Console\Command;
+use App\Todo;
 
 class TodoAll extends Command
 {
@@ -37,6 +38,9 @@ class TodoAll extends Command
      */
     public function handle()
     {
-        //
+        $todos = Todo::all();
+        foreach ($todos as $todo){
+            $this->info($todo->title);
+        }
     }
 }

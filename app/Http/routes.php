@@ -24,3 +24,6 @@ Route::get('text', function() {
 Route::get('array', function() {
     return ['now' => 'Laravel 5.1 体験中！', 'date' => new Datetime];
 });
+
+Route::get('status', 'AppController@status');
+Route::get('app', 'AppController@getApp');

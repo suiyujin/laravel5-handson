@@ -7,6 +7,7 @@
 
 <body>
 <h1>アプリケーションのページ</h1>
+<img src="{{ asset('images/laravel.png') }}">
 
 </body>
 </html>

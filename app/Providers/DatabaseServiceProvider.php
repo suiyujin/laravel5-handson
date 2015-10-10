@@ -23,8 +23,8 @@ class DatabaseServiceProvider extends ServiceProvider
             '1.0' => Migrations\App_1_0::class,
         ]);
 
-        // $this->seeds([
-        //     'test' => Seeds\Test::class,
-        // ], 'test');
+        $this->seeds([
+            'test' => Seeds\Test::class,
+        ], 'test');
     }
 }

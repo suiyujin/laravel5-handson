@@ -17,7 +17,17 @@ class Test extends Seeder
     {
         Model::unguard();
 
-        //
+        DB::table('todos') -> truncate();
+
+        DB::table('todos') -> insert([
+            'title' => 'CDを返す',
+            'status' => 1,
+        ]);
+
+        DB::table('todos') -> insert([
+            'title' => '勉強会の準備をする',
+            'status' => 2,
+        ]);
 
         Model::reguard();
     }

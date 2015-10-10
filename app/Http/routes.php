@@ -16,3 +16,11 @@ Route::get('/', function () {
 
     return view('welcome');
 });
+
+Route::get('text', function() {
+    return 'こんにちは！';
+});
+
+Route::get('array', function() {
+    return ['now' => 'Laravel 5.1 体験中！', 'date' => new Datetime];
+});

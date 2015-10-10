@@ -16,7 +16,8 @@ class AppController extends Controller
 
     public function getApp()
     {
-        $todos = Todo::all();
+        //$todos = Todo::all();
+        $todos = Todo::whereStatus(2)->get();
         //return view('app', ['todos' => $todos]);
         return view('app', compact('todos'));
     }
